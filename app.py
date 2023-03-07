@@ -35,7 +35,7 @@ app.layout = html.Div(
                 ),
                 html.P(
                     id="header-description",
-                    children=("The cost of precious metals", html.Br(), "between 2018 and 2021"),
+                    children="2018 to 2021",
                 ),
             ],
         ),

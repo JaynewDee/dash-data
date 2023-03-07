@@ -1,69 +1,70 @@
 body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-    background-color: #2F83AD;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  background-color: #2f83ad;
+  overflow-x: hidden;
 }
 
 /* Header styling */
 #header-area {
-    background-color: black;
-    height: 216px;
-	margin:0;
-	padding-top:24px;
+  display: flex;
+  flex-flow: column;
+  background-color: black;
+  margin: 4rem auto;
 }
 
 #header-title {
-    color: #fff;
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 auto;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #header-description {
-    color: #dfdfdf;
-    margin: 4px auto;
-    text-align: center;
-    max-width: 384px;
-	font-size: 18px;
+  color: #dfdfdf;
+  margin: 4px auto;
+  text-align: center;
+  max-width: 384px;
+  font-size: 18px;
 }
 
-/* Menu styling */
 #menu-area {
-    height: 90px;
-    width: 1200px;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 12px;
-    margin: -55px auto 0 auto;
-    background-color: silver;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 12px;
+  margin: -55px auto 0 auto;
+  background-color: silver;
 }
 
 .menu-title {
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: black;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: black;
 }
 
 .Select-control {
-    width: 256px;
-    height: 48px;
+  width: 256px;
+  height: 48px;
 }
 
-.Select--single > .Select-control .Select-value, .Select-placeholder {
-    line-height: 48px;
-	font-weight: bold;
+.Select--single > .Select-control .Select-value,
+.Select-placeholder {
+  line-height: 48px;
+  font-weight: bold;
 }
 
 /* Remove annoying border when dropdown has been used. */
-.is-focused:not(.is-open)>.Select-control{
-	border:none;
-	box-shadow: none;
+.is-focused:not(.is-open) > .Select-control {
+  border: none;
+  box-shadow: none;
 }
 
 /* Date Range colours */
 /* Calendar date start and end */
-.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
   background: goldenrod;
   border: 1px double goldenrod;
   color: #fff;
@@ -71,23 +72,35 @@ body {
 
 /* Calendar in between start and end date */
 .CalendarDay__selected_span {
-    background: gold;
-    border: 1px double gold;
-    color: #fff;
+  background: gold;
+  border: 1px double gold;
+  color: #fff;
 }
 
-.CalendarDay__selected_span:active, .CalendarDay__selected_span:hover {
-    background: goldenrod;
-    border: 1px double goldenrod;
-    color: #fff;
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background: goldenrod;
+  border: 1px double goldenrod;
+  color: #fff;
 }
 
 /* Graph styling */
 #graph-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1200px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 720px) {
+  #menu-area {
+    height: 200px;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+  }
 }
